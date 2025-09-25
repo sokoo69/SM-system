@@ -151,3 +151,6 @@ Deployment
 
 Render - server side
 Netlify - client side
+
+
+something error
