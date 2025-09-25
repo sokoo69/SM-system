@@ -14,8 +14,11 @@ dotenv.config();
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
+// Check if MONGO_URL is provided
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/school-management-system';
+
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect(mongoUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
