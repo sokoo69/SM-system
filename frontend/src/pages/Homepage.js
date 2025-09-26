@@ -96,18 +96,37 @@ const Homepage = () => {
                 </Grid>
 
                 {/* Login Section */}
-                <Box sx={{ textAlign: 'center', py: 4 }}>
-                    <Typography variant="h4" component="h2" gutterBottom>
+                <Box sx={{ 
+                    textAlign: 'center', 
+                    py: 6,
+                    my: 4,
+                    background: 'linear-gradient(45deg, #f0f0f0 30%, #ffffff 90%)',
+                    borderRadius: 3,
+                    boxShadow: 2
+                }}>
+                    <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
                         Ready to Login?
                     </Typography>
-                    <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
+                    <Typography variant="h6" color="text.secondary" sx={{ mb: 4, fontWeight: 400 }}>
                         Choose your role to access the appropriate portal
                     </Typography>
-                    <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <Box sx={{ 
+                        display: 'flex', 
+                        gap: 3, 
+                        justifyContent: 'center', 
+                        flexWrap: 'wrap',
+                        alignItems: 'center'
+                    }}>
                         <Button 
                             variant="contained" 
                             size="large"
                             onClick={() => navigate('/Adminlogin')}
+                            sx={{ 
+                                minWidth: 180,
+                                py: 2,
+                                fontSize: '1.1rem',
+                                fontWeight: 'bold'
+                            }}
                         >
                             Admin Login
                         </Button>
@@ -115,6 +134,12 @@ const Homepage = () => {
                             variant="contained" 
                             size="large"
                             onClick={() => navigate('/Teacherlogin')}
+                            sx={{ 
+                                minWidth: 180,
+                                py: 2,
+                                fontSize: '1.1rem',
+                                fontWeight: 'bold'
+                            }}
                         >
                             Teacher Login
                         </Button>
@@ -122,6 +147,12 @@ const Homepage = () => {
                             variant="contained" 
                             size="large"
                             onClick={() => navigate('/Studentlogin')}
+                            sx={{ 
+                                minWidth: 180,
+                                py: 2,
+                                fontSize: '1.1rem',
+                                fontWeight: 'bold'
+                            }}
                         >
                             Student Login
                         </Button>
