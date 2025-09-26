@@ -20,6 +20,7 @@ import StudentComplain from './StudentComplain';
 import Logout from '../Logout'
 import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
+import DeveloperFooter from '../../components/DeveloperFooter';
 
 const StudentDashboard = () => {
     const [open, setOpen] = useState(true);
@@ -84,6 +85,7 @@ const StudentDashboard = () => {
                     </Routes>
                 </Box>
             </Box>
+            <DeveloperFooter />
         </>
     );
 }

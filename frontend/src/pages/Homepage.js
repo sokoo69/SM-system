@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SchoolIcon from '@mui/icons-material/School';
 import PeopleIcon from '@mui/icons-material/People';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import DeveloperFooter from '../components/DeveloperFooter';
 
 const Homepage = () => {
     const navigate = useNavigate();
@@ -127,6 +128,7 @@ const Homepage = () => {
                     </Box>
                 </Box>
             </Container>
+            <DeveloperFooter />
         </Box>
     );
 };

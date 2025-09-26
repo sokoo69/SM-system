@@ -16,6 +16,7 @@ import Logout from '../Logout'
 import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
 import StudentAttendance from '../admin/studentRelated/StudentAttendance';
+import DeveloperFooter from '../../components/DeveloperFooter';
 
 import TeacherClassDetails from './TeacherClassDetails';
 import TeacherComplain from './TeacherComplain';
@@ -91,6 +92,7 @@ const TeacherDashboard = () => {
                     </Routes>
                 </Box>
             </Box>
+            <DeveloperFooter />
         </>
     );
 }

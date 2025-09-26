@@ -12,6 +12,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../redux/userRelated/userHandle';
+import DeveloperFooter from '../components/DeveloperFooter';
 
 const LoginPage = ({ role }) => {
     const [email, setEmail] = useState('');
@@ -161,6 +162,7 @@ const LoginPage = ({ role }) => {
                     </Box>
                 </Paper>
             </Box>
+            <DeveloperFooter />
         </Container>
     );
 };
