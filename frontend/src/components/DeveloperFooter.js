@@ -23,7 +23,7 @@ const DeveloperFooter = ({ position = 'fixed', bottomOffset = 0 }) => {
             <Typography variant="body2" sx={{ color: 'white', fontSize: '12px' }}>
                 Developed by{' '}
                 <Link 
-                    href="https://www.linkedin.com/in/shawon-ahmed/" 
+                    href="www.linkedin.com/in/saykot-biswas-shawon" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     sx={{ 
