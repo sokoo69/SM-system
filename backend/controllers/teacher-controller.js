@@ -13,13 +13,13 @@ const teacherRegister = async (req, res) => {
         const existingTeacherByEmail = await Teacher.findOne({ email });
 
         if (existingTeacherByEmail) {
-            res.send({ message: 'Email already exists' });
+            return res.send({ message: 'Email already exists' });
         }
         else {
             let result = await teacher.save();
             await Subject.findByIdAndUpdate(teachSubject, { teacher: teacher._id });
             result.password = undefined;
-            res.send(result);
+            return res.send(result);
         }
     } catch (err) {
         res.status(500).json(err);
@@ -36,12 +36,12 @@ const teacherLogIn = async (req, res) => {
                 teacher = await teacher.populate("school", "schoolName")
                 teacher = await teacher.populate("teachSclass", "sclassName")
                 teacher.password = undefined;
-                res.send(teacher);
+                return res.send(teacher);
             } else {
-                res.send({ message: "Invalid password" });
+                return res.send({ message: "Invalid password" });
             }
         } else {
-            res.send({ message: "Teacher not found" });
+            return res.send({ message: "Teacher not found" });
         }
     } catch (err) {
         res.status(500).json(err);

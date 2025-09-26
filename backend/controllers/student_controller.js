@@ -14,7 +14,7 @@ const studentRegister = async (req, res) => {
         });
 
         if (existingStudent) {
-            res.send({ message: 'Roll Number already exists' });
+            return res.send({ message: 'Roll Number already exists' });
         }
         else {
             const student = new Student({
@@ -26,7 +26,7 @@ const studentRegister = async (req, res) => {
             let result = await student.save();
 
             result.password = undefined;
-            res.send(result);
+            return res.send(result);
         }
     } catch (err) {
         res.status(500).json(err);
@@ -44,12 +44,12 @@ const studentLogIn = async (req, res) => {
                 student.password = undefined;
                 student.examResult = undefined;
                 student.attendance = undefined;
-                res.send(student);
+                return res.send(student);
             } else {
-                res.send({ message: "Invalid password" });
+                return res.send({ message: "Invalid password" });
             }
         } else {
-            res.send({ message: "Student not found" });
+            return res.send({ message: "Student not found" });
         }
     } catch (err) {
         res.status(500).json(err);
@@ -94,9 +94,9 @@ const getStudentDetail = async (req, res) => {
 const deleteStudent = async (req, res) => {
     try {
         const result = await Student.findByIdAndDelete(req.params.id)
-        res.send(result)
+        return res.send(result)
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 }
 
@@ -109,7 +109,7 @@ const deleteStudents = async (req, res) => {
             res.send(result)
         }
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 }
 
@@ -122,7 +122,7 @@ const deleteStudentsByClass = async (req, res) => {
             res.send(result)
         }
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 }
 
@@ -130,7 +130,7 @@ const updateStudent = async (req, res) => {
     try {
         if (req.body.password) {
             const salt = await bcrypt.genSalt(10)
-            res.body.password = await bcrypt.hash(res.body.password, salt)
+            req.body.password = await bcrypt.hash(req.body.password, salt)
         }
         let result = await Student.findByIdAndUpdate(req.params.id,
             { $set: req.body },
