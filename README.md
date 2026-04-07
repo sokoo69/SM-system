@@ -246,22 +246,19 @@ We welcome contributions! Please follow these steps:
 4. **Push to the branch** (`git push origin feature/AmazingFeature`)
 5. **Open a Pull Request**
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-**Shawon Ahmed**
+**Saykot Biswas Shawon**
 - GitHub: [@sokoo69](https://github.com/sokoo69)
-- LinkedIn: [Connect with me on LinkedIn](https://linkedin.com/in/shawon-ahmed)
+- LinkedIn: [Connect with me on LinkedIn](www.linkedin.com/in/saykot-biswas-shawon)
 
 ## 📞 Contact
 
 For any questions, suggestions, or collaboration opportunities:
 
-- **Email**: [Your Email Address]
-- **LinkedIn**: [Connect with me on LinkedIn](https://linkedin.com/in/shawon-ahmed)
+- **Email**: [Contact@saykot.dev]
+- **LinkedIn**: [Connect with me on LinkedIn](www.linkedin.com/in/saykot-biswas-shawon)
 - **GitHub**: [@sokoo69](https://github.com/sokoo69)
 
 ## 🙏 Acknowledgments
@@ -294,7 +291,3 @@ For any questions, suggestions, or collaboration opportunities:
 - [ ] Calendar integration
 - [ ] SMS notifications
 - [ ] Advanced search functionality
-
----
-
-**Made with ❤️ by Shawon Ahmed**
